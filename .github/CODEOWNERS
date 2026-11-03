@@ -1,0 +1,49 @@
+# ==============================================================================
+# GitHub Code Owners Configuration
+# 7 Decoupled Verticals (1 Developer per Pod)
+# ==============================================================================
+
+# Global Project Owner approval for critical configs and contracts
+*                       @project-owner
+/AGENTS.md              @project-owner
+/package.json           @project-owner
+/types/                 @project-owner
+/specs/                 @project-owner
+
+# Pod 1: Core Engine & Memory
+/lib/ai/openrouter.ts   @project-owner
+/lib/ksor/              @project-owner
+/lib/quiz/questions-pool.ts @project-owner
+/lib/storage/student-memory.ts @project-owner
+
+# Pod 2: Dashboard & Progress Center
+/app/(student)/dashboard/ @talha-ui-lead
+/components/dashboard/   @talha-ui-lead
+
+# Pod 3: Visual Mind Maps
+/app/(student)/visual-maps/ @talha-ui-lead
+/components/visual/      @talha-ui-lead
+
+# Pod 4: Socratic Screening & Readiness
+/app/(student)/quiz/screen/ @anas-mentor-lead
+/app/api/ai/screen/      @anas-mentor-lead
+/app/api/ai/readiness/   @anas-mentor-lead
+/components/ai/Socratic* @anas-mentor-lead
+/lib/ai/readiness.ts     @anas-mentor-lead
+
+# Pod 5: Practice Quiz & Mentor Side-Panel
+/app/(student)/quiz/practice/ @anas-mentor-lead @talha-ui-lead
+/app/api/ai/explain/     @anas-mentor-lead
+/components/ai/MentorSide* @anas-mentor-lead
+
+# Pod 6: Main Examination Engine
+/app/(student)/quiz/test/ @talha-ui-lead
+/components/quiz/QuestionPalette* @talha-ui-lead
+/components/quiz/Timer*  @talha-ui-lead
+/components/quiz/ProgressBar* @talha-ui-lead
+
+# Pod 7: Post-Test Diagnostics & Recovery
+/components/quiz/ExamResults* @anas-mentor-lead
+/lib/ai/diagnostic.ts    @anas-mentor-lead
+/app/api/ai/diagnostic/  @anas-mentor-lead
+/components/ai/Recovery* @anas-mentor-lead
